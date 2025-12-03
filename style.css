@@ -1,0 +1,281 @@
+:root {}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header#home-header::before {
+    content: "";
+    background-image: url("./assets/bg_overlay.png");
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./assets/bg_img.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    z-index: -1;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 30px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    color: #fff;
+    z-index: 1;
+}
+
+.logo-img {
+    padding: 4px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.logo {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 0 8px;
+}
+
+h1 {
+    text-shadow: 4px 3px 4px rgb(44, 6, 4, 0.8)
+}
+
+h2,
+h3 {
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.8);
+}
+
+nav>ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+nav>ul li {
+    padding: 4px 16px;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 500;
+}
+
+main {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 85vh;
+    font-size: medium;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    padding: 20px 40px;
+    margin: 0 80px;
+}
+
+.main-container {
+    padding: 10px 16px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+main h1 {
+    font-size: 40px;
+}
+
+main h3 {
+    font-size: 20px;
+}
+
+p {
+    margin: 8px 0;
+}
+
+.btn {
+    margin: 16px 0;
+    padding: 8px 16px;
+    cursor: pointer;
+    background-color: red;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: #fff;
+    font-size: medium;
+}
+
+
+/* About us page */
+header#about {
+    max-width: 100%;
+}
+
+section#home-about {
+    height: 100vh;
+    background-image: url("./assets/bg_img.png");
+    background-size: cover;
+}
+
+section#home-project {
+    height: 100vh;
+    background-image: url("./assets/bg_img.png");
+    background-size: cover;
+    display: block;
+}
+
+section#project {
+    display: block;
+}
+
+section#project>h2,
+section#home-project>h2 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+section {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    gap: 50px;
+}
+
+.profile-img {
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 16px;
+    background-color: bisque;
+    flex: 1 0 40%;
+}
+
+.profile-logo {
+    max-width: 100%;
+}
+
+.profile-summary {
+    color: #fff;
+    font-size: medium;
+    font-weight: 500;
+}
+
+.details-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.col1,
+.col2 {
+    flex-grow: 1;
+    list-style-type: square;
+}
+
+hr {
+    width: 60px;
+    margin: 20px 0;
+    border-color: #240d0c;
+    border-width: 2px;
+}
+
+/* Project */
+header#project {
+    max-width: 100%;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    max-width: 40vh;
+    border: 2px solid black;
+    border-radius: 16px;
+    background-color: bisque;
+    padding: 10px;
+}
+
+.card-img {
+    max-width: 100%;
+}
+
+.content-container {
+    display: flex;
+    align-items: center;
+}
+
+.btn-arrow {
+    border-radius: 50%;
+    max-width: 30px;
+    max-height: 30px;
+    padding: 4px;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: #000;
+}
+
+/* Media Query */
+@media screen and (max-width:767px) {
+    .main-container {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .profile-img {
+        flex: 1 0 45%;
+    }
+
+    main {
+        justify-content: center;
+    }
+}
